@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -11,15 +10,6 @@ import (
 func main() {
 	log.Printf("SSL_CERT_DIR: %s", os.Getenv("SSL_CERT_DIR"))
 	log.Printf("KO_DATA_PATH: %s", os.Getenv("KO_DATA_PATH"))
-
-	files, err := os.ReadDir("/var/run/ko")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for _, file := range files {
-		fmt.Println(file.Name(), file.IsDir())
-	}
 
 	doRequest("https://host.docker.internal:8443/hello")
 	doRequest("https://httpbingo.org/ip")
