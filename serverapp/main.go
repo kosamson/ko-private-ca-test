@@ -21,8 +21,8 @@ func main() {
 
 	if err := http.ListenAndServeTLS(
 		":8443",
-		"ca-setup/kosamson.site.crt",
-		"ca-setup/kosamson.site.key",
+		"../ca-setup/kosamson.site.crt",
+		"../ca-setup/kosamson.site.key",
 		nil,
 	); err != nil {
 		log.Fatal("ListenAndServe: ", err)
