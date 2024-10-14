@@ -1,1 +1,2 @@
-https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/#how-it-works
+# Private CA Test
+Test using a private (self-signed) certificate authority with a Go HTTP client/server in combination with [Ko](ko.build)
